@@ -5,19 +5,50 @@
   <title>Огонь!</title>
   <link rel="shortcut icon" href="/favicon.ico" />
   <!-- это можно выкинуть и заменить своими стилями -->
+  <link href="https://fonts.googleapis.com/css?family=Open+Sans:400,600&amp;subset=cyrillic" rel="stylesheet">
   <link rel="stylesheet" type="text/css" href="/styles.css">
   <!-- например, можно заюзать Bootstrap: -->
   <!--<link rel="stylesheet" type="text/css" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-alpha.5/css/bootstrap.min.css">-->
 </head>
 <body>
-  <p>Оно работает!<br /> Полдела сделано :)</p>
+  <div class="bg"></div>
+  <div class="container">
+    <div class="chat" id="app">
+      <ul class="chat__msg-list" ref="list">
+        <li class="chat__msg-item">
+          Lorem ipsum dolor sit amet, consectetur adipisicing elit. Perspiciatis, suscipit perferendis eum nesciunt, dicta impedit aperiam! Voluptate perspiciatis ratione rerum quod hic sed at quos consequuntur cumque eveniet. Animi, soluta?
+        </li>
+        <li class="chat__msg-item chat__msg-item_client">
+          Lorem ipsum dolor sit amet, consectetur adipisicing elit. Perspiciatis, suscipit perferendis eum nesciunt, dicta impedit aperiam! Voluptate perspiciatis ratione rerum quod hic sed at quos consequuntur cumque eveniet. Animi, soluta?
+        </li>
+         <li class="chat__msg-item chat__msg-item_client">
+          Lorem 
+        </li>
+        <li class="chat__msg-item chat__msg-item_client">
+          Lorem 
+        </li>
+        <li class="chat__msg-item chat__msg-item_client">
+          Lorem 
+        </li>
+        <!-- <message text="erere" client="true"> -->
+      </ul>
+      <div class="chat__footer">
+        <form class="chat__form" action="">
+          <input type="text" class="chat__field" placeholder="Написать сообщение..." autofocus>
+          <button class="chat__submit" type="submit" @click.prevent="sendMsg"></button>
+        </form>
+      </div> 
+    </div>
+  </div>
+ <!--  <p>Оно работает!<br /> Полдела сделано :)</p>
   <p><strong>Дано:</strong> сервер, который умеет API из одного вызова.<br/>
     На входе одна фраза (вопрос), на выходе другая (ответ).<br/> Действующий макет:</p>
   <form
     class="form-inline"
     onsubmit="$.post('/api/get-answer', {q: this.q.value}).done(function(resp) {
       if (resp.ok) {
-        alert(resp.a)
+        alert(resp.a);
+        console.log(resp);
       } else {
         console.log('ERR:', resp.error);
       }
@@ -62,9 +93,11 @@
     Про остальное лучше посоветоваться.</p>
  
   <p>...и чем меньше кода будет, тем лучше:</p>
-  <p><img src="errors.jpg"></p>
+  <p><img src="errors.jpg"></p> -->
 
   <!-- jQuery совершенно не обязателен. Вообще, весь этот файл дан просто для примера -->
   <script src="https://code.jquery.com/jquery-3.1.1.min.js" integrity="sha256-hVVnYaiADRTO2PzUGmuLJr8BLUSjGIZsDYGmIJLv2b8=" crossorigin="anonymous"></script>
+  <script src="https://cdn.jsdelivr.net/npm/vue"></script>
+  <script src="script.js"></script>
 </body>
 </html>
