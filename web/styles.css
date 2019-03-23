@@ -19,7 +19,6 @@ body {
 .bg {
   background-image: linear-gradient(to right top, #7ca5e1, #b1a5df, #d6a8d4, #eeafc6, #f8bbbb);
   position: fixed;
-  position: fixed;
   top: 0;
   left: 0;
   right: 0;
