@@ -9,6 +9,13 @@ body {
   padding: 0;
 }		
 
+.container {
+	display: flex;
+	margin: auto;
+	position: relative;
+	width: 500px;
+}
+
 .bg {
 	background-image: linear-gradient(to right top, #7ca5e1, #b1a5df, #d6a8d4, #eeafc6, #f8bbbb);
 	position: fixed;
@@ -84,11 +91,4 @@ body {
 	border-top: 1px solid lightgray;
 	min-height: 45px;
 	width: 100%;
-}
-
-.container {
-	display: flex;
-	margin: auto;
-	position: relative;
-	width: 500px;
 }
